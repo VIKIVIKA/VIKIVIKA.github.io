@@ -11,11 +11,12 @@
       pf('_env', 'development');
   </script>
  <script>
-   pf('recommendations', {
+   setTimeout(() => {
+    pf('recommendations', {
                     contentPoolId: "123",
                     recommendationType: "related",
                     url: "https://www.pathfactory-tracking-test.com"
-                });
+                })}, 1000);
  </script>
 </head>
 
