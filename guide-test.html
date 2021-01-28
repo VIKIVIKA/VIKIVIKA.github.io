@@ -10,6 +10,16 @@
       pf('create', 'LB-96489541-1');
       pf('_env', 'development');
   </script>
+    <script type="text/javascript">
+    setTimeout(() => {
+        if (pf) {
+                  pf('recommendations', {
+                    contentPoolId: "123",
+                    recommendationType: "related"
+                });
+        }
+    }, 1000);
+  </script>
 </head>
 
 <body>
