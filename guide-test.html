@@ -11,13 +11,14 @@
       pf('_env', 'development');
   </script>
  <script>
+   
    setTimeout(() => {
     if (pf) {
     pf('recommendations', {
                     contentPoolId: "123",
                     recommendationType: "related",
                     url: "https://www.pathfactory-tracking-test.com"
-                }
+                }, function(response) {console.log("my response")}
       )
     }
     }, 1000);
