@@ -9,17 +9,19 @@
     })(window,document,'script','http://localhost:8080/jukebox.js',"pf");
       pf('create', 'LB-96489541-1');
       pf('_env', 'development');
-  pf('recommendations', {
+  </script>
+ <script>
+  setTimeout(() => {
+if(window.pf) {
+   pf('recommendations', {
                     contentPoolId: "123",
                     recommendationType: "related",
                     url: "https://www.pathfactory-tracking-test.com"
                 });
- pf('recommendations', {
-                    contentPoolId: "123",
-                    recommendationType: "trending",
-                    url: "https://www.pathfactory-tracking-test.com"
-                });
-  </script>
+  }
+
+}, 1000)
+ </script>
 </head>
 
 <body>
