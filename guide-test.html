@@ -4,24 +4,22 @@
 <head>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" > </script>
  <script type="text/javascript">
-    (function(j,u,k,e,b,o,x){    j["pfObject"]=b;j[b]=j[b]||function(){
-(j[b].q=j[b].q||[]).push(arguments)},j[b].l=1*new Date();o=u.createElement(k),
+    (function(j,u,k,e,b,o,x){j["pfObject"]=b;j[b]=j[b]||function(){
+    (j[b].q=j[b].q||[]).push(arguments)},j[b].l=1*new Date();o=u.createElement(k),
     x=u.getElementsByTagName(k)[0];o.async=1;o.src=e;x.parentNode.insertBefore(o,x)
-    })(window,document,'script','http://localhost:8080/jukebox.js',"pf");
-      pf('create', 'LB-96489541-1');
-      pf('_env', 'development');
+    })(window,document,'script','https://app.qa-pathfactory.com/qa/jukebox/current/jukebox.js',"pf");
+      pf('create', 'LB-07250006-7');
+      pf('_env', 'qa');
+	  console.log("IN PF");
+	  pf("recommendations", {
+		  contentPoolUuid: "a26b1484-cd29-4bab-b34e-5a9a34de931f",
+		  recommendationType: "recommended_for_you"
+	  }, 
+		 function (recommendations) {
+		  // customer can execute the task's on receiving recommendations.
+		  console.log(recommendations)
+	  });
   </script>
- <script type="text/javascript">	
-	console.log("IN PF")
-			pf("recommendations", {
-  			  contentPoolUuid: "a26b1484-cd29-4bab-b34e-5a9a34de931f",
-  			  recommendationType: "trending"
-			},
-  			function (recommendations) {
-				// customer can execute the task's on receiving recommendations.
-				console.log(recommendations)
-			});
- </script>
 </head>
 
 <body>
