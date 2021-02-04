@@ -12,8 +12,7 @@
       pf('_env', 'development');
   </script>
  <script type="text/javascript">	
-	setTimeout(() => {
-		console.log("IN PF")
+	console.log("IN PF")
 			pf("recommendations", {
   			  contentPoolUuid: "a26b1484-cd29-4bab-b34e-5a9a34de931f",
   			  recommendationType: "trending"
@@ -22,7 +21,6 @@
 				// customer can execute the task's on receiving recommendations.
 				console.log(recommendations)
 			});
-	}, 5000)
  </script>
 </head>
 
