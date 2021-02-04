@@ -12,15 +12,17 @@
   </script>
  <script>	
 
-   setTimeout(() => {	
-    if (pf) {	
-    pf('recommendations', {	
-                    contentPoolId: "123",	
-                    url: "https://www.pathfactory-tracking-test.com"	
-                }, function(response) {console.log("my response", response)}	
-      )	
-    }	
-    }, 1000);	
+   setTimeout(() => {if(pf) {
+			console.log("IN PF")
+			pf("recommendations", {
+  			contentPoolUuid: "a26b1484-cd29-4bab-b34e-5a9a34de931f",
+  			recommendationType: "trending",
+  			url: "http://www.pathfactory-tracking-test2.com/blog/hot-off-the-presses-engagement-in-the-netflix-era-new-research-on-on-demand-nurturing/"}, 
+			function (recommendations) {
+				// customer can execute the task's on receiving recommendations.
+				console.log(recommendations)
+			});
+		}}, 1000);
  </script>
 </head>
 
