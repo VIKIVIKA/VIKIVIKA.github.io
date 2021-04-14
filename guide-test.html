@@ -12,6 +12,9 @@
     })(window,document,'script','http://localhost:8080/jukebox.js',"pf");
       pf('create', 'LB-96489541-1');
       pf('set', { '_env' : 'development' });
+	pf(function(tracker) {
+		console.log("get tracker", tracker.get("_env"))
+	});
   </script>
 
 <script type="text/javascript">	
