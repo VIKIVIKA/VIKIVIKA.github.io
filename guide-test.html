@@ -32,12 +32,14 @@ console.log("my recommendations", recommendations);
 	</script> -->
 	
 	<script async type="text/javascript">
-    (function(j,u,k,e,b,o,x){j["pfObject"]=b;j[b]=j[b]||function(){
+		window.onbeforeunload = function() {
+(function(j,u,k,e,b,o,x){j["pfObject"]=b;j[b]=j[b]||function(){
     (j[b].q=j[b].q||[]).push(arguments)},j[b].l=1*new Date();o=u.createElement(k),
     x=u.getElementsByTagName(k)[0];o.async=1;o.src=e;x.parentNode.insertBefore(o,x)
     })(window,document,'script','http://localhost:8080/jukebox.js',"pf");
       pf('create', 'LB-96489541-1');
       pf('_env', 'development');
+}; 
 </script>
 <!-- 	<script src="https://www.pathfactory.com/wp-content/themes/pathfactory/dist/application-min-39aee660cf.js"></script>
 <script src="https://app.cdn.lookbookhq.com/libraries/overlay/overlay.js"></script>
