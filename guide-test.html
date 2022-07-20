@@ -29,6 +29,10 @@ console.log("my recommendations", recommendations);
     })(window,document,'script','http://localhost:8080/jukebox.js','pf');
       pf('create', 'LB-44AAAB61-109');
       pf('_env', 'development');
+	pf('setSnowplowCypressTest', {
+		trackerName: "spMicro",
+		collector: '54.82.67.6:9000'
+	});
 	</script>
 	
 <!-- 	<script type="text/javascript">
